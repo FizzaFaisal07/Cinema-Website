@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStar Cinemas</title>
+    <link rel="stylesheet" href="p1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-film"></i></div>
+                <h1>RedStar Cinemas</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#showtimes">Showtimes</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline" id="login-btn">Login</a>
+                <a href="#" class="btn btn-primary" id="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Experience Movies Like Never Before</h2>
+            <p>Immerse yourself in the ultimate cinematic experience with state-of-the-art sound and projection technology, luxurious seating, and a wide selection of the latest blockbusters.</p>
+            <a href="#showtimes" class="btn btn-primary">Book Tickets Now</a>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="movies" id="movies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Now Showing</h2>
+            </div>
+            <div class="movies-grid" id="movies-container">
+                <!-- Movies will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Showtimes Section -->
+    <section class="showtimes" id="showtimes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Showtimes</h2>
+            </div>
+            <div class="showtimes-filter">
+                <button class="filter-btn active" data-day="today">Today</button>
+                <button class="filter-btn" data-day="tomorrow">Tomorrow</button>
+                <button class="filter-btn" data-day="week">This Week</button>
+            </div>
+            <div class="showtimes-list active" id="today-showtimes">
+                <!-- Today's showtimes will be loaded here by JavaScript -->
+            </div>
+            <div class="showtimes-list" id="tomorrow-showtimes">
+                <!-- Tomorrow's showtimes will be loaded here by JavaScript -->
+            </div>
+            <div class="showtimes-list" id="week-showtimes">
+                <!-- This week's showtimes will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About RedStar Cinemas</h2>
+                    <p>RedStar Cinemas is a premier movie theater chain dedicated to providing the ultimate movie-going experience. With locations across major cities, we bring the magic of cinema to life with cutting-edge technology and unparalleled comfort.</p>
+                    <p>Our theaters feature state-of-the-art projection and sound systems, luxurious reclining seats, and a wide selection of concessions to enhance your viewing experience.</p>
+                    <p>Whether you're looking for the latest Hollywood blockbuster, an indie gem, or a family-friendly animation, RedStar Cinemas has something for everyone.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cinema interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <p>123 Cinema Street, Movie City, MC 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <p>(123) 456-7890</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <p>info@redstarcinemas.com</p>
+                        </div>
+                    </div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 10:00 AM - 11:00 PM</p>
+                    <p>Saturday - Sunday: 9:00 AM - 12:00 AM</p>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h2>RedStar Cinemas</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="#showtimes">Showtimes</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 RedStar Cinemas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p style="margin-top: 15px;">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Register</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="register-firstname">First Name</label>
+                                <input type="text" id="register-firstname" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="register-lastname">Last Name</label>
+                                <input type="text" id="register-lastname" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" class="form-control" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="register-password">Password</label>
+                                <input type="password" id="register-password" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="register-confirm">Confirm Password</label>
+                                <input type="password" id="register-confirm" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-phone">Phone Number</label>
+                        <input type="tel" id="register-phone" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <p style="margin-top: 15px;">Already have an account? <a href="#" id="show-login">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Book Tickets</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="booking-form">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Movie</label>
+                                <input type="text" class="form-control" id="booking-movie" readonly>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label>Showtime</label>
+                                <input type="text" class="form-control" id="booking-showtime" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="booking-name">Full Name</label>
+                                <input type="text" id="booking-name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="booking-email">Email</label>
+                                <input type="email" id="booking-email" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="booking-phone">Phone Number</label>
+                                <input type="tel" id="booking-phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="booking-tickets">Number of Tickets</label>
+                                <select id="booking-tickets" class="form-control" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="seat-selection">
+                        <div class="screen">Screen</div>
+                        <div class="seat-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #444;"></div>
+                                <span>Available</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: var(--accent-color);"></div>
+                                <span>Selected</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #333;"></div>
+                                <span>Occupied</span>
+                            </div>
+                        </div>
+                        <div class="seats-grid" id="seats-container">
+                            <!-- Seats will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="booking-payment">Payment Method</label>
+                        <select id="booking-payment" class="form-control" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="credit">Credit Card</option>
+                            <option value="debit">Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cash">Cash at Cinema</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="confirm-booking">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Booking Confirmation</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center;">
+                    <div style="font-size: 60px; color: var(--accent-color); margin-bottom: 20px;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px;">Thank You for Your Booking!</h3>
+                    <p style="margin-bottom: 10px;">Your tickets have been successfully booked.</p>
+                    <p style="margin-bottom: 20px;">A confirmation email has been sent to <span id="confirmation-email"></span></p>
+                    <div style="background-color: var(--primary-bg); padding: 15px; border-radius: 4px; margin-bottom: 20px; text-align: left;">
+                        <h4 style="color: var(--accent-color); margin-bottom: 10px;">Booking Details</h4>
+                        <p><strong>Movie:</strong> <span id="confirmation-movie"></span></p>
+                        <p><strong>Showtime:</strong> <span id="confirmation-showtime"></span></p>
+                        <p><strong>Seats:</strong> <span id="confirmation-seats"></span></p>
+                        <p><strong>Booking Reference:</strong> <span id="confirmation-ref"></span></p>
+                    </div>
+                    <button class="btn btn-primary" id="close-confirmation">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="p1.js"></script>
+</body>
+</html>
