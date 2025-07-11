@@ -685,3 +685,9 @@ footer {
         width: 95%;
     }
 }
+@media (max-width: 480px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
